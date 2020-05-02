@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: poi
+  name: poi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: poi
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: poi
+    spec:
+      containers:
+      - image: registryfiw7378.azurecr.io/poi:0.9
+        name: poi
+        resources: {}
+status: {}
