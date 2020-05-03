@@ -20,5 +20,6 @@ spec:
       containers:
       - image: registryfiw7378.azurecr.io/tripviewer:0.9
         name: tripviewer
+        imagePullPolicy: Always
         resources: {}
 status: {}
