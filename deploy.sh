@@ -1,7 +1,7 @@
 cd yaml
-kubectl apply -f poi.yaml
-kubectl apply -f trips.yaml
-kubectl apply -f tripviewer.yaml
-kubectl apply -f user-java.yaml
-kubectl apply -f userprofile.yaml
-cd..
+kubectl apply -f poi.yaml -n openhack
+kubectl apply -f trips.yaml -n openhack
+kubectl apply -f tripviewer.yaml -n openhack
+kubectl apply -f user-java.yaml -n openhack
+kubectl apply -f userprofile.yaml -n openhack
+cd ..
