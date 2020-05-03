@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx
-  name: nginx
+    run: tripviewer
+  name: tripviewer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: nginx
+      run: tripviewer
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: nginx
+        run: tripviewer
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: registryfiw7378.azurecr.io/tripviewer:0.9
+        name: tripviewer
         resources: {}
 status: {}

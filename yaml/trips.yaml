@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx
-  name: nginx
+    run: trips
+  name: trips
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: nginx
+      run: trips
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: nginx
+        run: trips
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: registryfiw7378.azurecr.io/trips:0.9
+        name: trips
         resources: {}
 status: {}

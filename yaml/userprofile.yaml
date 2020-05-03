@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx
-  name: nginx
+    run: userprofile
+  name: userprofile
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: nginx
+      run: userprofile
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: nginx
+        run: userprofile
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: registryfiw7378.azurecr.io/userprofile:0.9
+        name: userprofile
         resources: {}
 status: {}
