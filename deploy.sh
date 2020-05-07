@@ -14,4 +14,8 @@ kubectl expose deployment poi --name=poi --type=ClusterIP --port=80 -n openhacka
 kubectl expose deployment trips --name=trips --type=ClusterIP --port=80 -n openhackapi
 kubectl expose deployment user-java --name=user-java --type=ClusterIP --port=80 -n openhackapi
 kubectl expose deployment userprofile --name=userprofile --type=ClusterIP --port=80 -n openhackapi
+
+kubectl apply -f ingressweb.yaml -n openhackweb
+kubectl apply -f ingressapi.yaml -n openhackapi
+
 cd ..
