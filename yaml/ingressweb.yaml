@@ -69,3 +69,39 @@ spec:
           serviceName: tripviewer
           servicePort: 80
         path: /lib(/|$)(.*)
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: openhack-ingressweb-UserProfile
+  namespace: openhackweb
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /UserProfile/$2
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: tripviewer
+          servicePort: 80
+        path: /UserProfile(/|$)(.*)
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: openhack-ingressweb-Trip
+  namespace: openhackweb
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /Trip/$2
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: tripviewer
+          servicePort: 80
+        path: /Trip(/|$)(.*)
