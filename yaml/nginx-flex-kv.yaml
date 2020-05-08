@@ -22,6 +22,6 @@ spec:
         keyvaultobjectnames: sqlpwd    # list of KeyVault object names (semi-colon separated)
         keyvaultobjecttypes: secret  # list of KeyVault object types: secret, key or cert (semi-colon separated)
         keyvaultobjectversions: ""     # [OPTIONAL] list of KeyVault object versions (semi-colon separated), will get latest if empty
-        resourcegroup: ""              # [REQUIRED FOR < v0.0.14] the resource group of the KeyVault
-        subscriptionid: ""             # [REQUIRED FOR < v0.0.14] the subscription ID of the KeyVault
-        tenantid: ""                   # the tenant ID of the KeyVault
+        resourcegroup: "teamResources"              # [REQUIRED FOR < v0.0.14] the resource group of the KeyVault
+        subscriptionid: "f8631591-5e14-4e47-be2c-d1b303e8c181"             # [REQUIRED FOR < v0.0.14] the subscription ID of the KeyVault
+        tenantid: "b4bc8b48-5d75-4724-84b5-e68fd9f1263b"                   # the tenant ID of the KeyVault
