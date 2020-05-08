@@ -48,7 +48,7 @@ spec:
   - http:
       paths:
       - backend:
-          serviceName: poi
+          serviceName: user-java
           servicePort: 80
         path: /api/user-java(/|$)(.*)
 ---
