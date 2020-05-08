@@ -33,3 +33,39 @@ spec:
           serviceName: tripviewer
           servicePort: 80
         path: /images(/|$)(.*)
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: openhack-ingressweb-css
+  namespace: openhackweb
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /css/$2
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: tripviewer
+          servicePort: 80
+        path: /css(/|$)(.*)
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: openhack-ingressweb-lib
+  namespace: openhackweb
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /lib/$2
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: tripviewer
+          servicePort: 80
+        path: /lib(/|$)(.*)
