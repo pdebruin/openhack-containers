@@ -2,7 +2,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: apidevs
-  namespace: api
+  namespace: openhackapi
 rules:
 - apiGroups: ["", "extensions", "apps"]
   resources: ["*"]
@@ -17,12 +17,12 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: apidev-access
-  namespace: api
+  namespace: openhackapi
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
   name: apidevs
 subjects:
 - kind: Group
-  namespace: api
+  namespace: openhackapi
   name: 1124749c-faf0-4afb-8e4b-4050dd1476e8
